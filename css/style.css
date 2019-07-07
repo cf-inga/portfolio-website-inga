@@ -1,0 +1,127 @@
+/*
+Colors used:
+Primary Color (Red): #FF3E41;
+Primary Color (Dark Blue): #373F51;
+Secondary Color (Light Grey): #F6F6F6;
+Background Color (White): #FFFFFF;
+*/
+
+/*
+Typography Used:
+
+RALEWAY (for headings) & KAHLUA (for paragraphs and smaller text)
+
+--- Menu: Raleway, Light, 16
+
+--- Headings
+Hero Section: Raleway, Medium, 29
+              Raleway, Light, 21
+Section Titles: Raleway, Regular, 28
+Subheadings (Projects): Raleway, Regular, 12
+Subheadings2 (Description): Khula, Semibold, 20
+
+--- Paragraphs
+Paragraphs: Khula, Regular, 16
+
+--- Buttons: Khula, Semibold, 14
+
+ */
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Khula', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #373F51;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+.hero-title { /* Mobile version size */
+  font-size: 29px;
+  font-weight: 500;
+}
+.hero-subtitle { /* Mobile version size */
+  font-size: 0.724em;
+  font-weight: 300;
+}
+
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h3 { /* This style is going to be used only in the project Ink Tank */
+  font-size: 14px;
+  font-weight: 600;
+}
+.project-subheading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #6A809A;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #FF3E41;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #FF3E41;
+  border-bottom: 1px solid currentColor;
+}
+
+.logo{
+ border-bottom: none;
+}
+.logo:hover,
+.logo:focus,
+.logo:active {
+  border-bottom: none;
+}
+
+.nav-links {
+  color: #373F51;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+.nav-links:hover,
+.nav-links:focus,
+.nav-links:active {
+  color: #373F51;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.button{
+  display: inline-block;
+  background-color: #FF3E41;
+  color: #FFFFFF;
+  font-weight: 600;  /* Semibold */
+  font-size: 0.875em;  /* 14px */
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.2s opacity;
+}
+
+.button:hover,
+.button:focus,
+.button:active{
+  color: #FFFFFF;
+  opacity: 0.8;
+}
