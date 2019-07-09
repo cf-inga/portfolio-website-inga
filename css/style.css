@@ -3,6 +3,8 @@
 	2. =NAVIGATION - nav
 	3. =HEADERS - h1, h2 and specific classes
 	4. =CUSTOM LINKS - buttons, logo
+
+  =Q - questions (to be removed after studying is over)
 */
 /*
 Colors used:
@@ -37,7 +39,7 @@ Paragraphs: Khula, Regular, 16
 body {
   background-color: #FFFFFF;
   font-family: 'Khula', sans-serif;
-  font-size: 16px;
+  font-size: 16px; /*mobile: 16px*/
   font-weight: 400;
   line-height: 1.6;
   color: #373F51;
@@ -84,30 +86,40 @@ nav li:active { /*same as hover and focus*/
 /* ===HEADERS=== */
 h1 {
   font-family: 'Raleway', sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-}
-.hero-title { /* Mobile version size */
-  font-size: 29px;
+  font-size: 2.563em; /*mobile: 41px*/
   font-weight: 500;
 }
-.hero-subtitle { /* Mobile version size */
-  font-size: 0.724em;
+
+#hero h1 span{ /*em is calculated in relation to h1*/
+  font-size: 0.610em; /* mobile: 25px*/
   font-weight: 300;
+  display: block;
 }
+#my-story h1{ /* same as h2 */
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.750em; /*mobile: 28px*/
+  font-weight: 400;
+}
+/* =Q would it be possible to write it this way as well? h1 in about.xml might need another solution anyway. currently, h1 is the title of the first paragraph.
+  h2, #my-story h1{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.750em;
+  font-weight: 400;
+}*/
 h2{
   font-family: 'Raleway', sans-serif;
-  font-size: 28px;
+  font-size: 1.750em; /*mobile: 28px*/
   font-weight: 400;
 }
 
 h3 { /* This style is going to be used only in the project Ink Tank */
-  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.125em; /*mobile: 18px*/
   font-weight: 600;
 }
 .project-subheading {
   font-family: 'Raleway', sans-serif;
-  font-size: 12px;
+  font-size: 0.750em; /*mobile: 12px*/
   font-weight: 400;
   line-height: 1.6;
   color: #6A809A;
