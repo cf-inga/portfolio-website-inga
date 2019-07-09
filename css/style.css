@@ -1,3 +1,9 @@
+/* CSS DIRECTORY
+	1. =GLOBAL - body, img, a
+	2. =NAVIGATION - nav
+	3. =HEADERS - h1, h2 and specific classes
+	4. =CUSTOM LINKS - buttons, logo
+*/
 /*
 Colors used:
 Primary Color (Red): #FF3E41;
@@ -27,6 +33,7 @@ Paragraphs: Khula, Regular, 16
 
  */
 
+/* ===GLOBAL=== */
 body {
   background-color: #FFFFFF;
   font-family: 'Khula', sans-serif;
@@ -36,6 +43,45 @@ body {
   color: #373F51;
 }
 
+img {
+  width: 100%;
+}
+
+a {
+  color: #FF3E41;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #FF3E41;
+  border-bottom: 1px solid currentColor;
+}
+
+a:active {/*same as hover and focus*/
+  color: #FF3E41;
+  border-bottom: 1px solid currentColor;
+}
+
+/* ===NAVIGATION=== */
+nav li{
+  color: #373F51;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+nav li:hover,
+nav li:focus{
+  color: #373F51;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+nav li:active { /*same as hover and focus*/
+  color: #373F51;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+/* ===HEADERS=== */
 h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 28px;
@@ -49,7 +95,6 @@ h1 {
   font-size: 0.724em;
   font-weight: 300;
 }
-
 h2{
   font-family: 'Raleway', sans-serif;
   font-size: 28px;
@@ -68,22 +113,7 @@ h3 { /* This style is going to be used only in the project Ink Tank */
   color: #6A809A;
 }
 
-img {
-  width: 100%;
-}
-
-a {
-  color: #FF3E41;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: #FF3E41;
-  border-bottom: 1px solid currentColor;
-}
-
+/* ===CUSTOM LINKS=== */
 .logo{
  border-bottom: none;
 }
@@ -91,20 +121,6 @@ a:active {
 .logo:focus,
 .logo:active {
   border-bottom: none;
-}
-
-.nav-links {
-  color: #373F51;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-}
-
-.nav-links:hover,
-.nav-links:focus,
-.nav-links:active {
-  color: #373F51;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
 }
 
 .button{
