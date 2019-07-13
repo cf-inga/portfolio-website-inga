@@ -1,8 +1,11 @@
 /* CSS DIRECTORY
 	1. =GLOBAL - body, img, a
-	2. =NAVIGATION - nav
-	3. =HEADERS - h1, h2 and specific classes
-	4. =CUSTOM LINKS - buttons, logo
+  2. =HEADER
+	3. =NAVIGATION - nav
+	4. =PARAGRAPHS - h1, h2 and specific classes
+  5. =FOOTER
+	6. =CUSTOM LINKS - buttons, logo
+  7. =LAYOUT - layout styling
 
   =Q - questions (to be removed after studying is over)
 */
@@ -26,7 +29,7 @@ Hero Section: Raleway, Medium, 29
               Raleway, Light, 21
 Section Titles: Raleway, Regular, 28
 Subheadings (Projects): Raleway, Regular, 12
-Subheadings2 (Description): Khula, Semibold, 20
+Subheadings2 (Description): Raleway, Semibold, 20
 
 --- Paragraphs
 Paragraphs: Khula, Regular, 16
@@ -36,6 +39,9 @@ Paragraphs: Khula, Regular, 16
  */
 
 /* ===GLOBAL=== */
+*{
+  box-sizing: border-box;
+}
 body {
   background-color: #FFFFFF;
   font-family: 'Khula', sans-serif;
@@ -65,29 +71,62 @@ a:active {/*same as hover and focus*/
   border-bottom: 1px solid currentColor;
 }
 
+/* ===HEADER=== */
+header{
+  /* background-color: #f9e1d7; */
+  padding: 10px 0;
+}
+#hero {
+  /* background-color: #f9efe3; */
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid rgba(183, 182, 182, 0.5);
+}
+
 /* ===NAVIGATION=== */
-nav li{
+nav{
+  width: auto;
+  display: inline-block;
+  /* margin-top: 4px; */
+  line-height: 0;
+  float: right;
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li{ /*menu items in one line*/
+  display: inline-block;
+}
+nav ul li a{
+  padding: 0 10px;
   color: #373F51;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
-nav li:hover,
-nav li:focus{
+nav ul li a:hover,
+nav ul li a:focus{
   color: #373F51;
-  font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
-nav li:active { /*same as hover and focus*/
+nav a:active { /*same as hover and focus*/
   color: #373F51;
-  font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 
-/* ===HEADERS=== */
+/* ===PARAGRAPHS=== */
 h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 2.563em; /*mobile: 41px*/
   font-weight: 500;
+}
+
+/* #hero h1 {
+  text-align: center;
+} */
+.center-text {
+  text-align: center;
 }
 
 #hero h1 span{ /*em is calculated in relation to h1*/
@@ -95,21 +134,18 @@ h1 {
   font-weight: 300;
   display: block;
 }
-#my-story h1{ /* same as h2 */
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.750em; /*mobile: 28px*/
-  font-weight: 400;
-}
-/* =Q would it be possible to write it this way as well? h1 in about.xml might need another solution anyway. currently, h1 is the title of the first paragraph.
-  h2, #my-story h1{
+
+/*h2, #my-story h1{
   font-family: 'Raleway', sans-serif;
   font-size: 1.750em;
   font-weight: 400;
 }*/
-h2{
+
+h2, .h2{
   font-family: 'Raleway', sans-serif;
   font-size: 1.750em; /*mobile: 28px*/
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 h3 { /* This style is going to be used only in the project Ink Tank */
@@ -117,18 +153,38 @@ h3 { /* This style is going to be used only in the project Ink Tank */
   font-size: 1.125em; /*mobile: 18px*/
   font-weight: 600;
 }
-.project-subheading {
+h2 + h3 { /*Subheadings which go directly below h2 titles (e.g. Project subtitles in index.html)*/
   font-family: 'Raleway', sans-serif;
-  font-size: 0.750em; /*mobile: 12px*/
+  font-size: 1em; /*mobile: 16px*/
   font-weight: 400;
   line-height: 1.6;
   color: #6A809A;
+  margin: 0;
+}
+
+
+/* ===FOOTER=== */
+
+footer {
+  background-color: #F6F6F6;
+  display: inline-block;
+  width: 100%;
+}
+
+footer p:last-child { /*copyright section*/
+  margin-top: 2em;
 }
 
 /* ===CUSTOM LINKS=== */
-.logo{
- border-bottom: none;
+.logo, .logo img {
+   border-bottom: none;
+   max-width: 150px;
+   display: inline-block;
+   line-height: 0;
+   position: relative;
+
 }
+
 .logo:hover,
 .logo:focus,
 .logo:active {
@@ -136,7 +192,7 @@ h3 { /* This style is going to be used only in the project Ink Tank */
 }
 
 .button{
-  display: inline-block;
+  display: inline-block; /* by default 'a' is an inline-level element, which ignores top & bottom paddings/margins. To avoid that, we need inline-block. In contrary to 'block' it won't start in a new line, which is needed if we want to place two buttons next to each other. Height and width can be set as well (in contrary to 'inline')*/
   background-color: #FF3E41;
   color: #FFFFFF;
   font-weight: 600;  /* Semibold */
@@ -153,3 +209,58 @@ h3 { /* This style is going to be used only in the project Ink Tank */
   color: #FFFFFF;
   opacity: 0.8;
 }
+
+/* =======H1 text for perfect properties on top of the image */
+/* .pp {
+  background: url(../img/perfect-properties/intro-s.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 10px;
+}
+.intro h1{
+
+  font-size: 36px;
+  color: Blue;
+margin: 0;
+}
+.col-1 {
+  width: 20%;
+  float: left;
+}
+.col-2 {
+  width: 80%;
+  float: left;
+}
+.row{
+  display: table;
+  content: "";
+  clear: both;
+} */
+/* END: =======H1 text for perfect properties on top of the image */
+
+/* ===LAYOUT=== */
+
+.container-header {
+  padding: 0 10px;
+  position:relative;
+}
+
+.intro-image {
+  padding: 0;
+}
+.container-main {
+  padding: 0 30px;
+}
+.container-footer {
+  padding: 0 15px;
+}
+.row {
+  margin: 25px 0;
+}
+
+/* -- just playing around -- */
+/* @media only screen and (min-width: 768px) {
+  .container-cover-image {
+    padding: 0 50px;
+  }
+} */
