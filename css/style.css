@@ -6,7 +6,7 @@
   5. =FOOTER
 	6. =CUSTOM LINKS - buttons, logo
   7. =LAYOUT - layout styling
-
+  8. =MEDIA QUERIES - adjustments for different screen sizes
   =Q - questions (to be removed after studying is over)
 */
 /*
@@ -56,19 +56,40 @@ img {
 }
 
 a {
+  display: inline-block;
   color: #FF3E41;
   text-decoration: none;
 }
 
-a:hover,
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #FF3E41;
+    transition: width .3s;
+}
+/* a:hover,
 a:focus {
   color: #FF3E41;
-  border-bottom: 1px solid currentColor;
+  /* border-bottom: 1px solid currentColor; */
+  /* width: 100%; */
+/* } */
+a:hover::after,
+a:focus::after {
+  /* color: #FF3E41; */
+  /* border-bottom: 1px solid currentColor; */
+  width: 100%;
 }
-
-a:active {/*same as hover and focus*/
-  color: #FF3E41;
-  border-bottom: 1px solid currentColor;
+/* a:active {/*same as hover and focus*/
+  /* color: #FF3E41; */
+  /* border-bottom: 1px solid currentColor; */
+  /* width: 10px; */
+/* } */
+a:active::after {/*same as hover and focus*/
+  /* color: #FF3E41; */
+  /* border-bottom: 1px solid currentColor; */
+  width: 100%;
 }
 
 /* ===HEADER=== */
@@ -87,8 +108,8 @@ header{
 nav{
   width: auto;
   display: inline-block;
-  /* margin-top: 4px; */
-  line-height: 0;
+  margin-top: 2px;
+  /* line-height: 0; */
   float: right;
 }
 
@@ -105,13 +126,26 @@ nav ul li a{
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
+nav ul li a::after{
+  background: #373F51;
+}
 nav ul li a:hover,
 nav ul li a:focus{
-  color: #373F51;
+  /* color: #373F51; */
   font-weight: 500;
 }
 nav a:active { /*same as hover and focus*/
-  color: #373F51;
+  /* color: #373F51; */
+  font-weight: 500;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after{
+  /* color: #373F51; */
+  font-weight: 500;
+}
+nav a:active::after { /*same as hover and focus*/
+  /* color: #373F51; */
   font-weight: 500;
 }
 
@@ -145,6 +179,7 @@ h2, .h2{
   font-family: 'Raleway', sans-serif;
   font-size: 1.750em; /*mobile: 28px*/
   font-weight: 400;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
@@ -178,17 +213,22 @@ footer p:last-child { /*copyright section*/
 /* ===CUSTOM LINKS=== */
 .logo, .logo img {
    border-bottom: none;
-   max-width: 150px;
+   width: 100%;
+   max-width: 65px;
    display: inline-block;
    line-height: 0;
    position: relative;
 
 }
 
-.logo:hover,
-.logo:focus,
-.logo:active {
-  border-bottom: none;
+.logo:hover::after,
+.logo:focus::after{
+  width: 0;
+}
+
+
+.logo:active::after {
+  width: 0;
 }
 
 .button{
@@ -200,12 +240,15 @@ footer p:last-child { /*copyright section*/
   padding: 10px;
   text-align: center;
   border-radius: 4px;
-  transition: 0.2s opacity;
+  transition: opacity 0.2s;
 }
 
 .button:hover,
-.button:focus,
-.button:active{
+.button:focus {
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+.button:active { /*same as hover & focus*/
   color: #FFFFFF;
   opacity: 0.8;
 }
@@ -258,9 +301,94 @@ margin: 0;
   margin: 25px 0;
 }
 
-/* -- just playing around -- */
-/* @media only screen and (min-width: 768px) {
-  .container-cover-image {
-    padding: 0 50px;
+/* ===MEDIA QUERIES=== */
+
+[class*="col-"] {
+  float: left;
+  padding: 0 10px;
+}
+
+.row::after {
+  content: ""; /*content property needs to be defined in order for pseudo-elment '::after' to work*/
+  clear: both;
+  display: table;
+}
+
+/* Extra small Devices (639 px and smaller)*/
+/* -- for the SVG animation part only */
+@media only screen and (max-width: 767px) {
+  .col-s-12 {
+    width: 100%;
   }
+}
+
+/* Small devices from 481px width */
+@media only screen and (min-width: 481px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (768px and larger) */
+@media only screen and (min-width: 768px) {
+  .col-md-6 {
+    width: 50%;
+  }
+  #my-work h2 {
+    margin-top: 0;
+  }
+  nav ul li a {
+    padding: 0 30px;
+  }
+
+  .container-header, #my-work.container-main {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-main {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For the text to get bigger (if applied in the previous media for the smaller sizes - the texts do not fit properly in the work section) */
+@media only screen and (min-width: 980px) {
+body {
+  font-size: 22px;
+}
+
+/* Large devices (1024px or larger)*/
+@media only screen and (min-width: 1024px) {
+  .col-lg-7 {
+    width: 58%;
+  }
+  .col-lg-5 {
+    width: 42%;
+  }
+  [class*="col-"] {
+    padding: 0 20px;
+  }
+  nav ul li a {
+    padding: 0 40px;
+  }
+}
+/* X-large devices (1440px or larger)*/
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+/* ===ANIMATION=== */
+/* This is animation for the dog.svg. To keep the code clean - it's included inside the SVG itself.
+
+@keyframes tail-wagging {
+  from {transform: translate(-400px);}
+  to {transform: translate(100px,-200px);}
+}
+
+.tail {
+  animation: 100ms tail-wagging infinite alternate linear;
 } */

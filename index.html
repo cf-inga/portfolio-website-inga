@@ -23,7 +23,7 @@
     <div class="container-header">
 
       <!-- Logo -->
-      <a href="index.html" class="logo"><img class="vertical-center" src="img/inga.svg" alt="Logo"></a>
+      <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
 
       <!-- Nav Menu -->
       <nav>
@@ -49,21 +49,21 @@
     </div>
 
     <!-- My Work -->
-    <div id="my-work">
-      <div class="container-main">
+    <div>
+      <div id="my-work" class="container-main">
 
         <!-- Ink Tank  -->
         <div class="row">
           <!-- Col 1: Image  -->
-          <div class="">
+          <div class="col-md-6 col-lg-7">
             <picture >
               <source media="(max-width:767px)" srcset="img/ink-tank-teaser-s.jpg">
-              <source media="(max-width:1151px)" srcset="img/ink-tank-teaser-s.jpg">
+              <source media="(max-width:1151px)" srcset="img/ink-tank-teaser-l.jpg">
               <img src="img/ink-tank-teaser-xl.jpg" alt="Ink Tank">
             </picture>
           </div>
           <!-- Col 2: Description  -->
-          <div class="">
+          <div class="col-md-6 col-lg-5">
             <h2>Ink Tank</h2>
             <h3>UX/UI Case Study</h3>
             <p>A mobile app for all tattoo lovers to assist them in the complicated process of getting a tattoo.</p>
@@ -74,7 +74,7 @@
         <!-- Perfect Properties  -->
         <div class="row">
           <!-- Col 1: Image  -->
-          <div class="">
+          <div class="col-md-6 col-lg-7">
             <picture>
               <source media="(max-width:767px)" srcset="img/perfect-properties-teaser-s.jpg">
               <source media="(max-width:1151px)" srcset="img/perfect-properties-teaser-l.jpg">
@@ -82,11 +82,24 @@
             </picture>
           </div>
           <!-- Col 2: Description  -->
-          <div class="">
+          <div class="col-md-6 col-lg-5">
             <h2>Perfect Properties</h2>
             <h3>UI Case Study</h3>
             <p>A responsive web app that provides property buyers with information on properties of interest.</p>
             <a href="perfect-properties.html"> --> View</a>
+          </div>
+        </div>
+
+        <!-- CSS Animation  -->
+        <div class="row">
+          <!-- Col 1: Image  -->
+          <div class="col-s-12 col-md-6 col-lg-7">
+            <img src="img/dog.svg" alt="Dog wagging tail">
+          </div>
+          <!-- Col 2: Description  -->
+          <div class="col-s-12 col-md-6 col-lg-5">
+            <h2>CSS Animation</h2>
+            <p>Animated SVG using keyframes.</p>
           </div>
         </div>
 
