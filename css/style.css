@@ -126,6 +126,7 @@ nav ul li a{
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
+
 nav ul li a::after{
   background: #373F51;
 }
