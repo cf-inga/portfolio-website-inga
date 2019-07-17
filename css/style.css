@@ -2,11 +2,12 @@
 	1. =GLOBAL - body, img, a
   2. =HEADER
 	3. =NAVIGATION - nav
-	4. =PARAGRAPHS - h1, h2 and specific classes
-  5. =FOOTER
-	6. =CUSTOM LINKS - buttons, logo
-  7. =LAYOUT - layout styling
-  8. =MEDIA QUERIES - adjustments for different screen sizes
+  4. =INTRO - hero, intro images (just below the navigation)
+	5. =PARAGRAPHS - h1, h2 and specific classes
+  6. =FOOTER
+	7. =CUSTOM LINKS - buttons, logo
+  8. =LAYOUT - layout styling
+  9. =MEDIA QUERIES - adjustments for different screen sizes
   =Q - questions (to be removed after studying is over)
 */
 /*
@@ -42,6 +43,7 @@ Paragraphs: Khula, Regular, 16
 *{
   box-sizing: border-box;
 }
+
 body {
   background-color: #FFFFFF;
   font-family: 'Khula', sans-serif;
@@ -69,18 +71,21 @@ a::after {
     background: #FF3E41;
     transition: width .3s;
 }
+
 /* a:hover,
 a:focus {
   color: #FF3E41;
   /* border-bottom: 1px solid currentColor; */
   /* width: 100%; */
 /* } */
+
 a:hover::after,
 a:focus::after {
   /* color: #FF3E41; */
   /* border-bottom: 1px solid currentColor; */
   width: 100%;
 }
+
 /* a:active {/*same as hover and focus*/
   /* color: #FF3E41; */
   /* border-bottom: 1px solid currentColor; */
@@ -97,12 +102,6 @@ header{
   /* background-color: #f9e1d7; */
   padding: 10px 0;
 }
-#hero {
-  /* background-color: #f9efe3; */
-  display: inline-block;
-  width: 100%;
-  border-bottom: 1px solid rgba(183, 182, 182, 0.5);
-}
 
 /* ===NAVIGATION=== */
 nav{
@@ -117,9 +116,7 @@ nav ul{
   list-style-type: none;
   padding: 0;
 }
-nav ul li{ /*menu items in one line*/
-  display: inline-block;
-}
+
 nav ul li a{
   padding: 0 10px;
   color: #373F51;
@@ -130,6 +127,7 @@ nav ul li a{
 nav ul li a::after{
   background: #373F51;
 }
+
 nav ul li a:hover,
 nav ul li a:focus{
   /* color: #373F51; */
@@ -145,9 +143,76 @@ nav ul li a:focus::after{
   /* color: #373F51; */
   font-weight: 500;
 }
+
 nav a:active::after { /*same as hover and focus*/
   /* color: #373F51; */
   font-weight: 500;
+}
+
+.navtoggle li:not(:last-child) { /* hide all menu items except the hamburger menu icon (the last one the list)*/
+  display: none;
+}
+
+/* .navtoggle.responsive - hamburger menu opened */
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li { /* will show the menu items*/
+  display: block;
+  padding: 10px 0;
+  /* border-top: 1px solid rgba(183, 182, 182, 0.5); */
+}
+
+/* .navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+} */
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+/* styling for the hamburger menu icon */
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 26px;
+  color: #FF3E41;
+  padding-right: 0;
+}
+
+/* do not display underline for the hamburger menu icon and for the links within open menu */
+.navtoggle li .icon::after, .navtoggle.responsive li a::after {
+  width: 0;
+}
+
+/* Logo */
+.logo, .logo img {
+   border-bottom: none;
+   width: 100%;
+   max-width: 65px;
+   display: inline-block;
+   line-height: 0;
+   position: relative;
+   top: 2px;
+}
+
+.logo:hover::after,
+.logo:focus::after{
+  width: 0;
+}
+
+.logo:active::after {
+  width: 0;
+}
+
+/* ===INTRO=== */
+#hero {
+  /* background-color: #f9efe3; */
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid rgba(183, 182, 182, 0.5);
 }
 
 /* ===PARAGRAPHS=== */
@@ -189,6 +254,7 @@ h3 { /* This style is going to be used only in the project Ink Tank */
   font-size: 1.125em; /*mobile: 18px*/
   font-weight: 600;
 }
+
 h2 + h3 { /*Subheadings which go directly below h2 titles (e.g. Project subtitles in index.html)*/
   font-family: 'Raleway', sans-serif;
   font-size: 1em; /*mobile: 16px*/
@@ -197,7 +263,6 @@ h2 + h3 { /*Subheadings which go directly below h2 titles (e.g. Project subtitle
   color: #6A809A;
   margin: 0;
 }
-
 
 /* ===FOOTER=== */
 
@@ -212,25 +277,6 @@ footer p:last-child { /*copyright section*/
 }
 
 /* ===CUSTOM LINKS=== */
-.logo, .logo img {
-   border-bottom: none;
-   width: 100%;
-   max-width: 65px;
-   display: inline-block;
-   line-height: 0;
-   position: relative;
-
-}
-
-.logo:hover::after,
-.logo:focus::after{
-  width: 0;
-}
-
-
-.logo:active::after {
-  width: 0;
-}
 
 .button{
   display: inline-block; /* by default 'a' is an inline-level element, which ignores top & bottom paddings/margins. To avoid that, we need inline-block. In contrary to 'block' it won't start in a new line, which is needed if we want to place two buttons next to each other. Height and width can be set as well (in contrary to 'inline')*/
@@ -249,6 +295,7 @@ footer p:last-child { /*copyright section*/
   color: #FFFFFF;
   opacity: 0.8;
 }
+
 .button:active { /*same as hover & focus*/
   color: #FFFFFF;
   opacity: 0.8;
@@ -289,15 +336,14 @@ margin: 0;
   position:relative;
 }
 
-.intro-image {
-  padding: 0;
-}
 .container-main {
   padding: 0 30px;
 }
+
 .container-footer {
   padding: 0 15px;
 }
+
 .row {
   margin: 25px 0;
 }
@@ -338,6 +384,19 @@ margin: 0;
   #my-work h2 {
     margin-top: 0;
   }
+
+  .navtoggle li:not(:last-child) { /* display menu items */
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child { /* hide hamburger menu icon */
+    display: none;
+  }
+
+  nav ul li{ /*menu items in one line*/
+    display: inline-block;
+  }
+
   nav ul li a {
     padding: 0 30px;
   }
@@ -356,8 +415,9 @@ margin: 0;
 
 /* For the text to get bigger (if applied in the previous media for the smaller sizes - the texts do not fit properly in the work section) */
 @media only screen and (min-width: 980px) {
-body {
-  font-size: 22px;
+  body {
+    font-size: 22px;
+  }
 }
 
 /* Large devices (1024px or larger)*/
@@ -375,6 +435,7 @@ body {
     padding: 0 40px;
   }
 }
+
 /* X-large devices (1440px or larger)*/
 @media only screen and (min-width: 1440px) {
   body {

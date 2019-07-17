@@ -10,30 +10,34 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Khula:400,600&display=swap" rel="stylesheet">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/e7e9b0eb04.js"></script>
   <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Pefect Properties, responsive Web App UI design</title>
-  <!-- <script type="text/javascript">
-  </script> -->
 </head>
 
 <body>
 
   <header>
     <div class="container-header">
+      <div class="navtoggle" id="myNavtoggle">
 
-      <!-- Logo -->
-      <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
 
-      <!-- Nav Menu -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
 
+        <!-- Nav Menu -->
+        <nav>
+          <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </nav>
+
+      </div>
     </div>
   </header>
 
@@ -57,7 +61,7 @@
     </div> -->
 
     <!-- Intro Image (Perfect Properties) -->
-    <div class="">
+    <div>
       <div class="container-header">
 
         <!-- TODO -->
@@ -362,6 +366,7 @@
   </footer>
 
   <!-- JS  -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 
 </body>
