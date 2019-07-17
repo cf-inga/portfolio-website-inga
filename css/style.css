@@ -342,7 +342,7 @@ margin: 0;
 
 .container-header {
   padding: 0 10px;
-  position:relative;
+  /* position:relative; */
 }
 
 .container-main {
