@@ -97,10 +97,14 @@ a:active::after {/*same as hover and focus*/
   width: 100%;
 }
 
+picture {
+  display: flex;
+}
+
 /* ===HEADER=== */
 header{
   /* background-color: #f9e1d7; */
-  padding: 10px 0;
+  padding: 10px 0 0; /*padding on top only*/
 }
 
 /* ===NAVIGATION=== */
@@ -115,6 +119,8 @@ nav{
 nav ul{
   list-style-type: none;
   padding: 0;
+  margin: 0; /* remove margin for nav menu so it's aligned with the logo */
+  margin-top: 4px;
 }
 
 nav ul li a{
@@ -128,15 +134,18 @@ nav ul li a::after{
   background: #373F51;
 }
 
-nav ul li a:hover,
+/*
+ * Make menu links bold upon hover *
+
+ nav ul li a:hover,
 nav ul li a:focus{
   /* color: #373F51; */
-  font-weight: 500;
+  /* font-weight: 500;
 }
 nav a:active { /*same as hover and focus*/
   /* color: #373F51; */
-  font-weight: 500;
-}
+  /* font-weight: 500;
+} */
 
 nav ul li a:hover::after,
 nav ul li a:focus::after{
@@ -195,7 +204,7 @@ nav a:active::after { /*same as hover and focus*/
    display: inline-block;
    line-height: 0;
    position: relative;
-   top: 2px;
+   top: 3px;
 }
 
 .logo:hover::after,
@@ -284,7 +293,7 @@ footer p:last-child { /*copyright section*/
   color: #FFFFFF;
   font-weight: 600;  /* Semibold */
   font-size: 0.875em;  /* 14px */
-  padding: 10px;
+  padding: 0.6em 1em;
   text-align: center;
   border-radius: 4px;
   transition: opacity 0.2s;
@@ -399,6 +408,10 @@ margin: 0;
 
   nav ul li a {
     padding: 0 30px;
+  }
+
+  nav ul li:nth-last-child(2) a { /*remove right padding for the last visible menu item Contact to align it with the border of the container*/
+    padding-right: 0;
   }
 
   .container-header, #my-work.container-main {
