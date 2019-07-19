@@ -47,7 +47,7 @@
 body {
   background-color: #fff;
   font-family: 'Khula', sans-serif;
-  font-size: 16px; /* mobile: 16px */
+  font-size: 18px; /* UPDATED: after checking the color accessibility, body font changed to 18px (the links and the text have the same size) mobile: 16px */
   font-weight: 400;
   line-height: 1.6;
   color: #373f51;
@@ -62,6 +62,7 @@ a {
   display: inline-block;
   color: #ff3e41;
   text-decoration: none;
+  font-weight: 600;   /* Semibold */
 }
 
 a::after {
@@ -204,7 +205,7 @@ nav a:active::after { /* same as hover and focus */
 /* ===PARAGRAPHS=== */
 h1 {
   font-family: 'Raleway', sans-serif;
-  font-size: 2.563em; /* mobile: 41px */
+  font-size: 2.278em; /* mobile: 41px */
   font-weight: 500;
 }
 
@@ -230,7 +231,7 @@ h1 {
 h2,
 .h2 {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.75em; /* mobile: 28px */
+  font-size: 1.556em; /* mobile: 28px */
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 0;
@@ -238,13 +239,13 @@ h2,
 
 h3 { /* This style is going to be used only in the project Ink Tank */
   font-family: 'Raleway', sans-serif;
-  font-size: 1.125em; /* mobile: 18px */
+  font-size: 1em; /* mobile: 18px */
   font-weight: 600;
 }
 
 h2 + h3 { /* Subheadings which go directly below h2 titles (e.g. Project subtitles in index.html) */
   font-family: 'Raleway', sans-serif;
-  font-size: 1em; /* mobile: 16px */
+  font-size: 0.889em; /* mobile: 16px */
   font-weight: 400;
   line-height: 1.6;
   color: #6a809a;
@@ -269,7 +270,6 @@ footer p:last-child { /* copyright section */
   display: inline-block; /* by default 'a' is an inline-level element, which ignores top & bottom paddings/margins. To avoid that, we need inline-block. In contrary to 'block' it won't start in a new line, which is needed if we want to place two buttons next to each other. Height and width can be set as well (in contrary to 'inline') */
   background-color: #ff3e41;
   color: #fff;
-  font-weight: 600;  /* Semibold */
   font-size: 0.875em;  /* 14px */
   padding: 0.6em 1em;
   text-align: center;
