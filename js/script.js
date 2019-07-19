@@ -1,8 +1,7 @@
 console.log("Hi, I'm Inga! Welcome to My Portfolio Site ");
 
 // toggles the menu, when hamburger icon is clicked
-function menuToggle() {
-
+function menuToggle () {
   var x = document.getElementById('myNavtoggle');
 
   if (x.className === 'navtoggle') { // if the menu is not opened
