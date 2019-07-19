@@ -1,56 +1,56 @@
 /* CSS DIRECTORY
-	1. =GLOBAL - body, img, a
-  2. =HEADER
-	3. =NAVIGATION - nav
-  4. =INTRO - hero, intro images (just below the navigation)
-	5. =PARAGRAPHS - h1, h2 and specific classes
-  6. =FOOTER
-	7. =CUSTOM LINKS - buttons, logo
-  8. =LAYOUT - layout styling
-  9. =MEDIA QUERIES - adjustments for different screen sizes
-  =Q - questions (to be removed after studying is over)
-*/
-/*
-Colors used:
-Primary Color (Red): #FF3E41;
-Primary Color (Dark Blue): #373F51;
-Secondary Color (Light Grey): #F6F6F6;
-Background Color (White): #FFFFFF;
+  	1. =GLOBAL - body, img, a
+    2. =HEADER
+  	3. =NAVIGATION - nav
+    4. =INTRO - hero, intro images (just below the navigation)
+  	5. =PARAGRAPHS - h1, h2 and specific classes
+    6. =FOOTER
+  	7. =CUSTOM LINKS - buttons, logo
+    8. =LAYOUT - layout styling
+    9. =MEDIA QUERIES - adjustments for different screen sizes
+    =Q - questions (to be removed after studying is over)
 */
 
 /*
-Typography Used:
+  Colors used:
+    Primary Color (Red): #ff3e41;
+    Primary Color (Dark Blue): #373f51;
+    Secondary Color (Light Grey): #f6f6f6;
+    Background Color (White): #fff;
+*/
 
-RALEWAY (for headings) & KAHLUA (for paragraphs and smaller text)
+/*
+  Typography Used:
 
---- Menu: Raleway, Light, 16
+    RALEWAY (for headings) & KAHLUA (for paragraphs and smaller text)
 
---- Headings
-Hero Section: Raleway, Medium, 29
-              Raleway, Light, 21
-Section Titles: Raleway, Regular, 28
-Subheadings (Projects): Raleway, Regular, 12
-Subheadings2 (Description): Raleway, Semibold, 20
+    --- Menu: Raleway, Light, 16
 
---- Paragraphs
-Paragraphs: Khula, Regular, 16
+    --- Headings
+        Hero Section: Raleway, Medium, 29
+                      Raleway, Light, 21
+        Section Titles: Raleway, Regular, 28
+        Subheadings (Projects): Raleway, Regular, 12
+        Subheadings2 (Description): Raleway, Semibold, 20
 
---- Buttons: Khula, Semibold, 14
+    --- Paragraphs: Khula, Regular, 16
 
+    --- Buttons: Khula, Semibold, 14
  */
 
 /* ===GLOBAL=== */
-*{
+
+* {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #fff;
   font-family: 'Khula', sans-serif;
-  font-size: 16px; /*mobile: 16px*/
+  font-size: 16px; /* mobile: 16px */
   font-weight: 400;
   line-height: 1.6;
-  color: #373F51;
+  color: #373f51;
 }
 
 img {
@@ -59,41 +59,25 @@ img {
 
 a {
   display: inline-block;
-  color: #FF3E41;
+  color: #ff3e41;
   text-decoration: none;
 }
 
 a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: #FF3E41;
-    transition: width .3s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #ff3e41;
+  transition: width 0.3s;
 }
-
-/* a:hover,
-a:focus {
-  color: #FF3E41;
-  /* border-bottom: 1px solid currentColor; */
-  /* width: 100%; */
-/* } */
 
 a:hover::after,
 a:focus::after {
-  /* color: #FF3E41; */
-  /* border-bottom: 1px solid currentColor; */
   width: 100%;
 }
 
-/* a:active {/*same as hover and focus*/
-  /* color: #FF3E41; */
-  /* border-bottom: 1px solid currentColor; */
-  /* width: 10px; */
-/* } */
-a:active::after {/*same as hover and focus*/
-  /* color: #FF3E41; */
-  /* border-bottom: 1px solid currentColor; */
+a:active::after {/* same as hover and focus */
   width: 100%;
 }
 
@@ -102,63 +86,51 @@ picture {
 }
 
 /* ===HEADER=== */
-header{
+header {
   /* background-color: #f9e1d7; */
-  padding: 10px 0 0; /*padding on top only*/
+  padding: 10px 0 0; /* padding on top only */
 }
 
 /* ===NAVIGATION=== */
-nav{
+nav {
   width: auto;
   display: inline-block;
   margin-top: 2px;
+
   /* line-height: 0; */
   float: right;
 }
 
-nav ul{
+nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0; /* remove margin for nav menu so it's aligned with the logo */
   margin-top: 4px;
 }
 
-nav ul li a{
+nav ul li a {
   padding: 0 10px;
-  color: #373F51;
+  color: #373f51;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
 
-nav ul li a::after{
-  background: #373F51;
+nav ul li a::after {
+  background: #373f51;
 }
-
-/*
- * Make menu links bold upon hover *
-
- nav ul li a:hover,
-nav ul li a:focus{
-  /* color: #373F51; */
-  /* font-weight: 500;
-}
-nav a:active { /*same as hover and focus*/
-  /* color: #373F51; */
-  /* font-weight: 500;
-} */
 
 nav ul li a:hover::after,
-nav ul li a:focus::after{
+nav ul li a:focus::after {
   /* color: #373F51; */
   font-weight: 500;
 }
 
-nav a:active::after { /*same as hover and focus*/
+nav a:active::after { /* same as hover and focus */
   /* color: #373F51; */
   font-weight: 500;
 }
 
-.navtoggle li:not(:last-child) { /* hide all menu items except the hamburger menu icon (the last one the list)*/
+.navtoggle li:not(:last-child) { /* hide all menu items except the hamburger menu icon (the last one the list) */
   display: none;
 }
 
@@ -167,9 +139,10 @@ nav a:active::after { /*same as hover and focus*/
   padding: 24px 0 0;
 }
 
-.navtoggle.responsive li { /* will show the menu items*/
+.navtoggle.responsive li { /* will show the menu items */
   display: block;
   padding: 10px 0;
+
   /* border-top: 1px solid rgba(183, 182, 182, 0.5); */
 }
 
@@ -177,7 +150,8 @@ nav a:active::after { /*same as hover and focus*/
   padding: 0 0 10px;
 } */
 
-.navtoggle, .navtoggle.responsive {
+.navtoggle,
+.navtoggle.responsive {
   position: relative;
 }
 
@@ -187,28 +161,30 @@ nav a:active::after { /*same as hover and focus*/
   right: 0;
   top: 2px;
   font-size: 26px;
-  color: #FF3E41;
+  color: #ff3e41;
   padding-right: 0;
 }
 
 /* do not display underline for the hamburger menu icon and for the links within open menu */
-.navtoggle li .icon::after, .navtoggle.responsive li a::after {
+.navtoggle li .icon::after,
+.navtoggle.responsive li a::after {
   width: 0;
 }
 
 /* Logo */
-.logo, .logo img {
-   border-bottom: none;
-   width: 100%;
-   max-width: 65px;
-   display: inline-block;
-   line-height: 0;
-   position: relative;
-   top: 3px;
+.logo,
+.logo img {
+  border-bottom: none;
+  width: 100%;
+  max-width: 65px;
+  display: inline-block;
+  line-height: 0;
+  position: relative;
+  top: 3px;
 }
 
 .logo:hover::after,
-.logo:focus::after{
+.logo:focus::after {
   width: 0;
 }
 
@@ -227,7 +203,7 @@ nav a:active::after { /*same as hover and focus*/
 /* ===PARAGRAPHS=== */
 h1 {
   font-family: 'Raleway', sans-serif;
-  font-size: 2.563em; /*mobile: 41px*/
+  font-size: 2.563em; /* mobile: 41px */
   font-weight: 500;
 }
 
@@ -238,21 +214,22 @@ h1 {
   text-align: center;
 }
 
-#hero h1 span{ /*em is calculated in relation to h1*/
-  font-size: 0.610em; /* mobile: 25px*/
+#hero h1 span { /* em is calculated in relation to h1 */
+  font-size: 0.61em; /* mobile: 25px */
   font-weight: 300;
   display: block;
 }
 
-/*h2, #my-story h1{
+/* h2, #my-story h1{
   font-family: 'Raleway', sans-serif;
   font-size: 1.750em;
   font-weight: 400;
-}*/
+} */
 
-h2, .h2{
+h2,
+.h2 {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.750em; /*mobile: 28px*/
+  font-size: 1.75em; /* mobile: 28px */
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 0;
@@ -260,37 +237,37 @@ h2, .h2{
 
 h3 { /* This style is going to be used only in the project Ink Tank */
   font-family: 'Raleway', sans-serif;
-  font-size: 1.125em; /*mobile: 18px*/
+  font-size: 1.125em; /* mobile: 18px */
   font-weight: 600;
 }
 
-h2 + h3 { /*Subheadings which go directly below h2 titles (e.g. Project subtitles in index.html)*/
+h2 + h3 { /* Subheadings which go directly below h2 titles (e.g. Project subtitles in index.html) */
   font-family: 'Raleway', sans-serif;
-  font-size: 1em; /*mobile: 16px*/
+  font-size: 1em; /* mobile: 16px */
   font-weight: 400;
   line-height: 1.6;
-  color: #6A809A;
+  color: #6a809a;
   margin: 0;
 }
 
 /* ===FOOTER=== */
 
 footer {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   display: inline-block;
   width: 100%;
 }
 
-footer p:last-child { /*copyright section*/
+footer p:last-child { /* copyright section */
   margin-top: 2em;
 }
 
 /* ===CUSTOM LINKS=== */
 
-.button{
-  display: inline-block; /* by default 'a' is an inline-level element, which ignores top & bottom paddings/margins. To avoid that, we need inline-block. In contrary to 'block' it won't start in a new line, which is needed if we want to place two buttons next to each other. Height and width can be set as well (in contrary to 'inline')*/
-  background-color: #FF3E41;
-  color: #FFFFFF;
+.button {
+  display: inline-block; /* by default 'a' is an inline-level element, which ignores top & bottom paddings/margins. To avoid that, we need inline-block. In contrary to 'block' it won't start in a new line, which is needed if we want to place two buttons next to each other. Height and width can be set as well (in contrary to 'inline') */
+  background-color: #ff3e41;
+  color: #fff;
   font-weight: 600;  /* Semibold */
   font-size: 0.875em;  /* 14px */
   padding: 0.6em 1em;
@@ -301,17 +278,19 @@ footer p:last-child { /*copyright section*/
 
 .button:hover,
 .button:focus {
-  color: #FFFFFF;
+  color: #fff;
   opacity: 0.8;
 }
 
-.button:active { /*same as hover & focus*/
-  color: #FFFFFF;
+.button:active { /* same as hover & focus */
+  color: #fff;
   opacity: 0.8;
 }
 
 /* =======H1 text for perfect properties on top of the image */
-/* .pp {
+
+/*
+  .pp {
   background: url(../img/perfect-properties/intro-s.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -331,17 +310,19 @@ margin: 0;
   width: 80%;
   float: left;
 }
-.row{
+.row {
   display: table;
   content: "";
   clear: both;
 } */
+
 /* END: =======H1 text for perfect properties on top of the image */
 
 /* ===LAYOUT=== */
 
 .container-header {
   padding: 0 10px;
+
   /* position:relative; */
 }
 
@@ -365,13 +346,13 @@ margin: 0;
 }
 
 .row::after {
-  content: ""; /*content property needs to be defined in order for pseudo-elment '::after' to work*/
+  content: ""; /* content property needs to be defined in order for pseudo-elment '::after' to work */
   clear: both;
   display: table;
 }
 
-/* Extra small Devices (639 px and smaller)*/
-/* -- for the SVG animation part only */
+/* Extra small Devices (639 px and smaller)
+   -- for the SVG animation part only */
 @media only screen and (max-width: 767px) {
   .col-s-12 {
     width: 100%;
@@ -390,6 +371,7 @@ margin: 0;
   .col-md-6 {
     width: 50%;
   }
+
   #my-work h2 {
     margin-top: 0;
   }
@@ -402,7 +384,7 @@ margin: 0;
     display: none;
   }
 
-  nav ul li{ /*menu items in one line*/
+  nav ul li { /* menu items in one line */
     display: inline-block;
   }
 
@@ -410,15 +392,17 @@ margin: 0;
     padding: 0 30px;
   }
 
-  nav ul li:nth-last-child(2) a { /*remove right padding for the last visible menu item Contact to align it with the border of the container*/
+  nav ul li:nth-last-child(2) a { /* remove right padding for the last visible menu item Contact to align it with the border of the container */
     padding-right: 0;
   }
 
-  .container-header, #my-work.container-main {
+  .container-header,
+  #my-work.container-main {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .container-main {
     max-width: 1000px;
     margin-left: auto;
@@ -433,23 +417,26 @@ margin: 0;
   }
 }
 
-/* Large devices (1024px or larger)*/
+/* Large devices (1024px or larger) */
 @media only screen and (min-width: 1024px) {
   .col-lg-7 {
     width: 58%;
   }
+
   .col-lg-5 {
     width: 42%;
   }
+
   [class*="col-"] {
     padding: 0 20px;
   }
+
   nav ul li a {
     padding: 0 40px;
   }
 }
 
-/* X-large devices (1440px or larger)*/
+/* X-large devices (1440px or larger) */
 @media only screen and (min-width: 1440px) {
   body {
     font-size: 24px;
@@ -457,6 +444,7 @@ margin: 0;
 }
 
 /* ===ANIMATION=== */
+
 /* This is animation for the dog.svg. To keep the code clean - it's included inside the SVG itself.
 
 @keyframes tail-wagging {
