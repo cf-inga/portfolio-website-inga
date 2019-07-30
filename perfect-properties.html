@@ -19,22 +19,49 @@
 
 <body>
 
-  <header>
+  <!-- <header>
     <div class="container-header">
       <div class="navtoggle" id="myNavtoggle">
 
 
         <!-- Logo -->
-        <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
+        <!-- <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
 
         <!-- Nav Menu -->
-        <nav>
+        <!-- <nav>
           <ul>
             <li><a href="index.html">Work</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
           </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header> -->
+
+  <header id="header">
+    <div class="container-header">
+      <div>
+
+
+        <!-- Logo -->
+        <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
+
+
+
+        <!-- Nav Menu -->
+        <nav id="ham-nav">
+          <a href="javascript:void(0);" class="icon" onclick="toggleNav()"><div class="animated-ham-icon" id="ham-icon"><span></span><span></span><span></span><span></span></div></a>
+
+          <div class="overlay" id="overlay">
+            <ul class="overlay-content">
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact" onclick="toggleNav()">Contact</a></li>
+            </ul>
+          </div>
         </nav>
 
       </div>
@@ -128,7 +155,7 @@
 
             <!-- Link -->
             <div class="">
-              <a href="https://marvelapp.com/6c2966d/screen/53240609" target="_blank">
+              <a href="https://marvelapp.com/6c2966d/screen/53240609" target="_blank" class="animated-underline">
                 <!-- Arrow -->
                 <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -222,7 +249,7 @@
 
             <!-- Link -->
             <div class="">
-              <a href="https://www.figma.com/proto/lcoq1l9UcQBafV7JjsCdBk/9-Icons?node-id=0%3A1&viewport=1334%2C643%2C1.09585&scaling=scale-down" target="_blank">
+              <a href="https://www.figma.com/proto/lcoq1l9UcQBafV7JjsCdBk/9-Icons?node-id=0%3A1&viewport=1334%2C643%2C1.09585&scaling=scale-down" target="_blank" class="animated-underline">
                 <!-- Arrow -->
                 <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -297,7 +324,7 @@
 
             <!-- Link to the style guide -->
             <div class="">
-              <a href="https://www.figma.com/proto/lcoq1l9UcQBafV7JjsCdBk/9-Icons?node-id=0%3A1&viewport=1334%2C643%2C1.09585&scaling=scale-down" target="_blank">
+              <a href="https://www.figma.com/proto/lcoq1l9UcQBafV7JjsCdBk/9-Icons?node-id=0%3A1&viewport=1334%2C643%2C1.09585&scaling=scale-down" target="_blank" class="animated-underline">
                 <!-- Arrow -->
                 <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
