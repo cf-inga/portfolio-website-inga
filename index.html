@@ -19,25 +19,36 @@
 
 <body>
 
-  <header>
-    <div class="container-header">
-      <div class="navtoggle" id="myNavtoggle">
+  <header id="header">
+    <div class="container">
 
+      <!-- Logo -->
+      <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
 
-        <!-- Logo -->
-        <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
+      <!-- Nav Menu for screens up to 767 px width -->
+      <nav id="ham-nav">
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+          <div class="animated-ham-icon" id="ham-icon"><span></span><span></span><span></span><span></span></div>
+        </a>
 
-        <!-- Nav Menu -->
-        <nav>
-          <ul>
+        <div class="overlay" id="overlay">
+          <ul class="overlay-content">
             <li><a href="index.html">Work</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#contact" id="menu-item-contact">Contact</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#contact" onclick="closeNavFast()">Contact</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-      </div>
+      <!-- Nav Menu for screens from 768 px width -->
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="index.html" class="active">Work</a></li>
+          <li><a href="about.html" class="animated-underline">About</a></li>
+          <li><a href="#contact" class="animated-underline">Contact</a></li>
+        </ul>
+      </nav>
+
     </div>
   </header>
 
@@ -45,7 +56,7 @@
 
     <!-- Hero -->
     <div id="hero">
-      <div class="container-header">
+      <div class="container">
 
         <h1 class="center-text">Hello, I’m Inga <span>UX designer, passionate about enhancing people’s everyday life through useful, usable and delightful design.</span></h1>
 
@@ -53,8 +64,8 @@
     </div>
 
     <!-- My Work -->
-    <div>
-      <div id="my-work" class="container-main">
+    <div id="my-work">
+      <div class="container">
 
         <!-- Ink Tank  -->
         <div class="row">
@@ -71,7 +82,7 @@
             <h2>Ink Tank</h2>
             <h3>UX/UI Case Study</h3>
             <p>A mobile app for all tattoo lovers to assist them in the complicated process of getting a tattoo.</p>
-            <a href="#"> --> View</a>
+            <a href="#" class="animated-underline"> --> View</a>
           </div>
         </div>
 
@@ -90,7 +101,7 @@
             <h2>Perfect Properties</h2>
             <h3>UI Case Study</h3>
             <p>A responsive web app that provides property buyers with information on properties of interest.</p>
-            <a href="perfect-properties.html"> --> View</a>
+            <a href="perfect-properties.html" class="animated-underline"> --> View</a>
           </div>
         </div>
 
@@ -113,7 +124,7 @@
 
   <!-- Footer -->
   <footer id="contact">
-    <div class="container-footer center-text">
+    <div class="container center-text">
 
       <h2>Get in Touch</h2>
 

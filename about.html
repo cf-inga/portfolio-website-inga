@@ -19,21 +19,32 @@
 
 <body>
 
-  <header>
-    <div class="container-header">
-      <div class="navtoggle" id="myNavtoggle">
-
+  <header id="header">
+    <div class="container">
+      <div>
 
         <!-- Logo -->
         <a href="index.html" class="logo"><img src="img/inga.svg" alt="Logo"></a>
 
-        <!-- Nav Menu -->
-        <nav>
+        <!-- Nav Menu for screens up to 767 px width -->
+        <nav id="ham-nav">
+          <a href="javascript:void(0);" class="icon" onclick="toggleNav()"><div class="animated-ham-icon" id="ham-icon"><span></span><span></span><span></span><span></span></div></a>
+
+          <div class="overlay" id="overlay">
+            <ul class="overlay-content">
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact" onclick="closeNavFast()">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Nav Menu for screens from 768 px width -->
+        <nav id="desktop-nav">
           <ul>
-            <li><a href="index.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+            <li><a href="index.html" class="animated-underline">Work</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="#contact" class="animated-underline">Contact</a></li>
           </ul>
         </nav>
 
@@ -44,8 +55,8 @@
   <main>
 
     <!-- Intro Image (Me) -->
-    <div>
-      <div class="container-header">
+    <div id="intro-img">
+      <div class="container">
         <picture>
           <source media="(max-width:767px)" srcset="img/about-inga-svilaite-s.jpg">
           <source media="(max-width:1151px)" srcset="img/about-inga-svilaite-l.jpg">
@@ -56,7 +67,7 @@
 
     <!-- CONTENT: the Story, Skills and Tools -->
     <div class="">
-      <div class="container-main">
+      <div class="container">
 
         <!-- SECTION: My story -->
         <div id="my-story" class="">
@@ -110,7 +121,7 @@
   </main>
 
   <footer id="contact">
-    <div class="container-footer center-text">
+    <div class="container center-text">
 
       <h2>Get in Touch</h2>
 
