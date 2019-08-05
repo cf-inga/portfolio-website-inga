@@ -80,6 +80,12 @@ header {
   padding: 15px 10px;
   position: fixed;
   width: 100%;
+  transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
   transition: top 0.3s;
 }
 
